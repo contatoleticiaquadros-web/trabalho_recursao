@@ -9,10 +9,9 @@ def busca_binaria(array, valor, inicio, fim):
     else:
         return busca_binaria(array, valor, meio + 1, fim)
 
-# Entrada do usuário
 entrada = input("Digite os números da lista, separados por espaço: ")
 lista = list(map(int, entrada.split()))
-lista.sort()  # garante que a lista esteja ordenada
+lista.sort()
 
 valor = int(input("Digite o valor que deseja buscar: "))
 resultado = busca_binaria(lista, valor, 0, len(lista) - 1)
